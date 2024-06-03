@@ -1,6 +1,6 @@
 .top {
     min-height: 100px;
-    background-image: url(../images/children-studying.jpg);
+    background-image: url(../assets/children-studying.jpg);
     background-blend-mode: darken;
     background-position: 50% 0;
     background-color: rgba(0, 0, 0, 0.5) !important;
