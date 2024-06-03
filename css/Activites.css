@@ -1,0 +1,25 @@
+.card img {
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+.card video {
+    aspect-ratio: 1/1;
+    object-position: 18% center;
+    object-fit: cover;
+}
+
+
+#Sports {
+    object-position: 50% 0;
+}
+
+#Health:hover {
+
+    object-fit: contain;
+    z-index: 500;
+}
+
+.row {
+    margin-bottom: 30px;
+}

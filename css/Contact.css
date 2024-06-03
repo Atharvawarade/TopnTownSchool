@@ -1,0 +1,44 @@
+/* Additional CSS styles can be added here */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.contact-info {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+}
+
+.contact-icons {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-icons a {
+    color: black;
+    text-decoration: none;
+}
+
+.contact-icons i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+    }
+
+    .contact-info,
+    .contact-icons {
+        margin: 0;
+        width: 100%;
+    }
+}
