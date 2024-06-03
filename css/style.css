@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'FontAwesome';
     src: url('https://topntown.odoo.com/web/static/src/libs/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('https://topntown.odoo.com/web/static/src/libs/fontawesome/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff');
@@ -780,6 +781,7 @@ small {
 /* end of nav  */
 
 
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 body,
@@ -789,6 +791,7 @@ html {
     overflow-x: hidden;
     font-family: 'Montserrat', sans-serif;
 }
+
 
 header {
     width: 100%;
@@ -811,8 +814,7 @@ header::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    /* Adjust the alpha value to control the darkness */
+    background: rgba(0, 0, 0, 0.5); /* Adjust the alpha value to control the darkness */
     z-index: 1;
 }
 
@@ -856,3 +858,36 @@ header::after {
 .title .button:hover {
     background-color: #ffffff;
 }
+
+.below_header{
+
+    background-image: url('../assets/Group 1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 5%;
+}
+
+.below_header_row{
+    width: 100%;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.text-column{
+    font-size: clamp(16px, 2.5vw, 20px);
+    color: #ffffff;
+    text-align: left;
+}
+
+
+.text-column h6{
+    font-size: clamp(28px, 2.5vw, 23px);
+}
+
+
