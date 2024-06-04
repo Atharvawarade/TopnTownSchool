@@ -132,45 +132,19 @@
     </div>
   </body>
   <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const video = document.querySelector(".card-video");
-    const playVideo = () => {
+    document.addEventListener("DOMContentLoaded", function () {
+        const video = document.querySelector(".card-video");
         video.play();
-        video.muted = true; // Default to muted on load
-    };
-    const unmuteVideo = () => {
-        video.muted = false; // Unmute the video on mouseover
-    };
-    const muteVideo = () => {
-        video.muted = true; // Mute the video on mouseout
-    };
+        video.addEventListener("mouseover", function () {
+            video.muted = false; // Unmute the video on mouseover
+            video.play(); // Play the video on mouseover
+        });
 
-    playVideo();
-
-    // Event listeners for desktop interaction
-    video.addEventListener("mouseover", unmuteVideo);
-    video.addEventListener("mouseout", muteVideo);
-
-    // Remove event listeners for mobile to avoid conflicts
-    const handleViewportChange = () => {
-        if (window.innerWidth <= 768) {
-            video.removeEventListener("mouseover", unmuteVideo);
-            video.removeEventListener("mouseout", muteVideo);
-            video.controls = true; // Enable video controls for mobile
-        } else {
-            video.addEventListener("mouseover", unmuteVideo);
-            video.addEventListener("mouseout", muteVideo);
-            video.controls = false; // Disable video controls for desktop
-        }
-    };
-
-    // Initial check
-    handleViewportChange();
-
-    // Add event listener to handle window resize
-    window.addEventListener("resize", handleViewportChange);
-});
-
+        video.addEventListener("mouseout", function () {
+            video.muted = true;
+            video.pause(); // Mute the video on mouseout
+        });
+    });
 </script>
 </body>
 </html>
