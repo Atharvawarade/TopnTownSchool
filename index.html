@@ -11,129 +11,247 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <style>
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1050; /* Higher z-index to ensure it stays on top */
+        background-color: white; /* Optional: Set background color */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
+      }
+      .navbar .container-fluid {
+        max-width: 80%; /* 80% width of the device */
+        margin: 0 auto; /* Center the container */
+      }
+      .offcanvas-header {
+        border-bottom: 1px solid #dee2e6;
+      }
+    </style>
   </head>
   <body>
-    <nav
-      class="navbar-ths navbar-58l navbar-qdp col-vx3 o_c-4kz d-bax block-jey shadow-lec"
-    >
-      <div class="main-amq container-akm">
-        <a href="/" class="navbar-brand-x47 logo-xjn me-om5">
-          <span
-            ><img
-              src="https://topntown.odoo.com/web/image/website/1/logo/Topntown?unique=b80e8ba"
-              class="img-pna"
-              width="95"
-              height="40"
-          /></span>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="./assets/logo.png"
+            alt="Logo"
+            width="50"
+            height="50"
+            class="d-inline-block align-text-top"
+          />
         </a>
-        <ul class="nav-dv6 navbar-nav-yet menu-ceb me-hbt">
-          <li class="nav-item-ys3">
-            <a href="/" class="nav-link-dhy act-mrw">
-              <span>Home</span>
-            </a>
-          </li>
-          <li class="nav-item-ys3">
-            <a href="Activities.html" class="nav-link-dhy">
-              <span>Activities</span>
-            </a>
-          </li>
-          <li class="nav-item-ys3">
-            <a href="/blog/2" class="nav-link-dhy">
-              <span>News</span>
-            </a>
-          </li>
-          <li class="nav-item-ys3">
-            <a href="/blog/3" class="nav-link-dhy">
-              <span>Success Stories</span>
-            </a>
-          </li>
-          <li class="nav-item-ys3">
-            <a href="Aboutus.html" class="nav-link-dhy">
-              <span>About Us</span>
-            </a>
-          </li>
-          <li class="nav-item-ys3">
-            <a href="Contact.html" class="nav-link-dhy">
-              <span>Contact us</span>
-            </a>
-          </li>
-        </ul>
-        <ul
-          class="navbar-nav-yet item-y2r gap-5rz flex-shrink-rbg content-h8n ps-8by"
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
         >
-          <li>
-            <a
-              href="#"
-              class="btn-p33 rounded-74b p-xtg lh-er6 link-ngl text-lk8"
-            >
-              <i class="lhhvd search-9lo fa-c5f lh-l2n"></i>
-            </a>
-          </li>
-          <li>
-            <div>
-              <a href="tel://+91 7410767473" class="nav-link-dhy p-ni5">
-                <i class="fa-xro fa-bs6 fa-3hz me-vnt"></i>
-                <span class="o_f-fdo"><small>+91 7410767473</small></span></a
-              >
-            </div>
-          </li>
-          <li></li>
-          <li class="dropdown-gxs">
-            <a href="#" class="dropdown-zdd btn-p33 btn-ljb border-vpa fw-ktj">
-              <span class="sma-58i">Chaitanya Rawat</span>
-            </a>
-            <div class="dropdown-menu-1mh">
-              <a href="/web" class="dropdown-item-swl ps-8by">
-                <i class="fa-xro fa-bs6 fa-y7m me-vnt sma-58i text-l4w"></i>
-                Apps
-              </a>
-              <a href="/my/home" class="dropdown-item-swl ps-8by">
-                <i class="fa-xro fa-bs6 card-xbq me-vnt sma-58i text-l4w"></i>
-                My Account
-              </a>
-              <div class="dropdown-ooa"></div>
-              <a
-                class="dropdown-item-swl ps-8by"
-                href="/web/session/logout?redirect=/"
-              >
-                <i class="fa-xro fa-bs6 fa-s6r me-vnt sma-58i text-l4w"></i>
-                Logout
-              </a>
-            </div>
-          </li>
-          <li>
-            <div>
-              <section>
-                <div class="container-akm">
-                  <a href="/contactus" class="btn-p33 btn-primary-xlp"
-                    >Contact Us</a
-                  >
-                </div>
-              </section>
-            </div>
-          </li>
-        </ul>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Success Stories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success me-2" type="submit">
+              Search
+            </button>
+          </form>
+          <a class="nav-link" href="tel:+1234567890">
+            <i class="bi bi-telephone-fill"></i> +1234567890
+          </a>
+          <a class="btn btn-outline-primary me-2" href="./signin.html"
+            >Sign In</a
+          >
+          <a class="btn btn-primary" href="./Contact_us.php">Contact Us</a>
+        </div>
       </div>
     </nav>
-    <header>
+
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">TOP N' TOWN</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Success Stories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+        </ul>
+        <form class="d-flex mt-3">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <a class="nav-link mt-3" href="tel:+1234567890">
+          <i class="bi bi-telephone-fill"></i> +1234567890
+        </a>
+        <a class="btn btn-outline-primary mt-3" href="./signin.html">Sign In</a>
+        <a class="btn btn-primary mt-3" href="./Contact_us.php">Contact Us</a>
+      </div>
+    </div>
+
+    <header class="mt-5 pt-5">
       <div class="title">
         <h1>TOP N' TOWN</h1>
-        <p>Our school has been ranked as the top CBSE school in the region for five consecutive years.</p>
+        <p>
+          Our school has been ranked as the top CBSE school in the region for
+          five consecutive years.
+        </p>
         <a href="./register.html" class="button">Contact Us</a>
       </div>
     </header>
-    
+
     <div class="below_header">
       <div class="row below_header_row align-items-center">
         <div class="col-lg-10 col-md-12 text-column">
-          <h6>Over 3,000 students graduate from our school every year and find employment within 2 months.</h6>
+          <h6>
+            Over 3,000 students graduate from our school every year and find
+            employment within 2 months.
+          </h6>
           <p>Join us and give your child the best chance to succeed.</p>
         </div>
         <div class="col-lg-2 col-md-12 button-column">
-          <a href="./Contact_us.php" class="btn btn-primary responsive-button">Contact Us</a>
+          <a href="./Contact_us.php" class="btn btn-primary responsive-button"
+            >Contact Us</a
+          >
         </div>
       </div>
     </div>
+
+    <div class="about_container">
+      <div class="about-content-container">
+        <div class="row about_row">
+          <div
+            class="col-md-6 text_row justify-content-center align-items-center"
+          >
+            <div class="text_container">
+              <p class="about_heading">Committed to Academic Excellence</p>
+              <p>
+                Our faculty comprises of professionals who are experts in their
+                respective fields, ensuring a well-rounded education for your
+                child.
+              </p>
+              <p>
+                Professionals in various fields working effectively in their
+                areas of expertise.
+              </p>
+            </div>
+            <!-- <button type="button" class="btn btn-primary btn-lg justify-content-left">Large button</button> -->
+          </div>
+          <div
+            class="col-md-6 image_row d-flex justify-content-center align-items-center"
+          >
+            <div class="image_container">
+              <img src="./assets/class.jpg" alt="Girls Hostel" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="below_about">
+      <div class="row below_about_row align-items-center">
+        <div class="col-lg-3 col-md-12 text-column">
+          <h1>12</h1>
+          <p>Faculties</p>
+        </div>
+        <div class="col-lg-3 col-md-12 text-column">
+          <h1>45</h1>
+          <p>Diverse Student Body</p>
+        </div>
+        <div class="col-lg-3 col-md-12 text-column">
+          <h1>8</h1>
+          <p>Libraries</p>
+        </div>
+        <div class="col-lg-3 col-md-12 text-column">
+          <h1>16,456</h1>
+          <p>Students</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="about_container">
+      <div class="about-content-container">
+        <div class="row about_row">
+          <div
+            class="col-md-6 image_row d-flex justify-content-center align-items-center"
+          >
+            <div class="image_container">
+              <img src="./assets/girl-watching.jpg" alt="Girls Hostel" />
+            </div>
+          </div>
+          <div
+            class="col-md-6 text_row justify-content-center align-items-center"
+          >
+            <div class="text_container">
+              <p class="about_heading">What sets us apart?</p>
+              <p>
+                We ensure the growth of every student in a warm and modern environment. Our school provides personalized attention to each student.
+              </p>
+              <p>
+                We provide individualized support to all our students to ensure their success.
+              </p>
+            </div>
+            <!-- <button type="button" class="btn btn-primary btn-lg justify-content-left">Large button</button> -->
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+
+    
+
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
