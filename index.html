@@ -11,6 +11,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
       .navbar {
         position: fixed;
@@ -251,10 +252,116 @@
       </div>
     </div>
 
+    <div class="carousel-container">
+      <button class="carousel-btn" id="prevBtn"><img src="./assets/left-arrow.png" alt="left-arrow"></button>
+      <div class="testimonial-box" id="testimonialBox">
+        <p id="testimonialText">
+          <div class="quotes_box"><img src="./assets/quote.png" alt="quotes"></div>
+        </p>
+      </div>
+      <button class="carousel-btn" id="nextBtn"><img src="./assets/right-arrow.png" alt="right-arrow"></button>
+    </div>
+    <div class="carousel-indicators" id="carouselIndicators"></div>
+
+
+
+
+    <div class="two_images row no-gutters">
+      <div class="col-6 image image1">
+        <i class="fa fa-book" style="font-size:48px;color:white"></i>
+        <h2>Curriculum</h2>
+        <p>Looking for a CBSE school that offers a dynamic and evolving environment in the heart of the city? Look no further!</p>
+        <button>Learn more about our approach</button>
+      </div>
+      <div class="col-6 image image2">
+        <i class="fa fa-institution" style="font-size:48px;color:white"></i>
+        <h2>Explore our campus</h2>
+        <p>Our modern campus is located just a 10-minute walk away from the city center and is easily accessible by car and public transport. It is also in close proximity to the train stations.</p>
+        <button>Learn more about our approach</button>
+      </div>
+    </div>
+
+
+
+
+
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      const testimonials = [
+        '"I have learned so much and have been able to work on professional projects thanks to the guidance of our mentors. The team is always there to support and guide us through any challenges. It is been an amazing journey!"- Testimonial from one of our students',
+        'Thanks to our innovative system, each student is assigned a mentor who provides personalized attention and guidance throughout their academic journey.',
+        'Personalized attention and quality education! Our mentors are available to guide and support students through flexible schedules. Everything your child needs to succeed academically.',
+      ];
+
+      let currentTestimonialIndex = 0;
+
+      const testimonialBox = document.getElementById("testimonialBox");
+      const testimonialText = document.getElementById("testimonialText");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+      const carouselIndicators = document.getElementById("carouselIndicators");
+
+      // Create indicators
+      testimonials.forEach((_, index) => {
+        const indicator = document.createElement("div");
+        indicator.classList.add("carousel-indicator");
+        if (index === 0) indicator.classList.add("active");
+        carouselIndicators.appendChild(indicator);
+      });
+
+      const indicators = document.querySelectorAll(".carousel-indicator");
+
+      prevBtn.addEventListener("click", () => {
+        slideTransition("left");
+        setTimeout(() => {
+          currentTestimonialIndex =
+            (currentTestimonialIndex - 1 + testimonials.length) %
+            testimonials.length;
+          updateTestimonial();
+        }, 500); // Wait for the transition to complete
+      });
+
+      nextBtn.addEventListener("click", () => {
+        slideTransition("right");
+        setTimeout(() => {
+          currentTestimonialIndex =
+            (currentTestimonialIndex + 1) % testimonials.length;
+          updateTestimonial();
+        }, 500); // Wait for the transition to complete
+      });
+
+      function slideTransition(direction) {
+        testimonialBox.style.transform =
+          direction === "left" ? "translateX(-100%)" : "translateX(100%)";
+        setTimeout(() => {
+          testimonialBox.style.transition = "none";
+          testimonialBox.style.transform =
+            direction === "left" ? "translateX(100%)" : "translateX(-100%)";
+          setTimeout(() => {
+            testimonialBox.style.transition = "transform 0.5s ease-in-out";
+            testimonialBox.style.transform = "translateX(0)";
+          }, 50);
+        }, 450); // Adjust timing for smoother transition
+      }
+
+      function updateTestimonial() {
+        testimonialText.textContent = testimonials[currentTestimonialIndex];
+        indicators.forEach((indicator, index) => {
+          indicator.classList.toggle(
+            "active",
+            index === currentTestimonialIndex
+          );
+        });
+      }
+
+      // Initialize with the first testimonial
+      updateTestimonial();
+    </script>
   </body>
 </html>

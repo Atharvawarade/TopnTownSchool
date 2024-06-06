@@ -1,5 +1,3 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 body,
@@ -32,7 +30,8 @@ header::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Adjust the alpha value to control the darkness */
+    background: rgba(0, 0, 0, 0.5);
+    /* Adjust the alpha value to control the darkness */
     z-index: 1;
 }
 
@@ -85,7 +84,7 @@ header::after {
 
 
 
-.below_header{
+.below_header {
     background-image: url('../assets/Group 1.png');
     background-size: cover;
     background-position: center;
@@ -98,20 +97,20 @@ header::after {
     padding: 2%;
 }
 
-.below_header_row{
+.below_header_row {
     width: 100%;
     justify-content: center;
     vertical-align: middle;
 }
 
-.text-column{
+.text-column {
     font-size: clamp(16px, 2.5vw, 20px);
     color: #ffffff;
     text-align: left;
 }
 
 
-.text-column h6{
+.text-column h6 {
     font-size: clamp(28px, 2.5vw, 23px);
 }
 
@@ -137,18 +136,19 @@ header::after {
     margin: 0 auto;
 }
 
-.about_row{
+.about_row {
     margin: 10%;
 }
 
 .image_container {
     width: 80%;
-    height: 100%; /* Ensure containers take full height of their column */
+    height: 100%;
+    /* Ensure containers take full height of their column */
     overflow: hidden;
-    
+
 }
 
-.text_container{
+.text_container {
     width: 80%;
     height: 100%;
     text-align: left;
@@ -157,22 +157,23 @@ header::after {
 .image_container img {
     width: 100%;
     height: auto;
-    object-fit: cover; /* Maintain aspect ratio while covering the container */
+    object-fit: cover;
+    /* Maintain aspect ratio while covering the container */
     -webkit-transform: scale(1);
-	transform: scale(1);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
 }
 
 .image_container:hover img {
-	-webkit-transform: scale(1.3);
-	transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
 }
 
 
 
 
-.below_about{
+.below_about {
     background-image: url('../assets/Group 2.png');
     background-size: cover;
     background-position: center;
@@ -187,12 +188,289 @@ header::after {
 }
 
 
-.below_about_row{
+.below_about_row {
     width: 80%;
     justify-content: center;
     margin-left: 10% !important;
 }
 
-.below_about_row .text-column{
+.below_about_row .text-column {
     text-align: center;
 }
+
+
+
+
+/* .carousel-container {
+    position: relative;
+    background-image: url('../assets/corousel-background.jpg       ') !important; /* Correct path to your background image */
+/* background-size: cover; */
+/* background-position: center; */
+/* width: 100%; */
+/* height: 80vh; */
+/* display: flex; */
+/* justify-content: center; Center horizontally */
+/* align-items: center;     Center vertically */
+/* } */
+/* 
+.carousel {
+    
+    display: flex;
+    overflow: hidden;
+    width: 60%;
+    height: auto;
+    position: relative;
+}
+
+.thoughts-container {
+    min-width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    position: relative;
+    display: none; /* Hide all containers initially */
+/* } */
+
+/* .thoughts-container.active {
+    display: block; /* Show the active container */
+/* } */
+
+/* .thoughts-container::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: -3rem;
+    width: 3rem;
+    height: 3rem;
+    background-image: url('../assets/quote.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #17b1d3;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px; */
+/* } */
+
+/* .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 10; */
+/* } */
+
+/* .carousel-button.prev {
+    left: 10px;
+} */
+/* 
+.carousel-button.next {
+    right: 10px;
+}   */
+
+
+
+.carousel-container {
+    background-image: url('../assets/corousel-background.jpg') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 60vh;
+    /* margin-top: -8%; */
+    padding: 5%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-btn {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: clamp(30px, 5vw, 50px);
+    height: clamp(30px, 5vw, 50px);
+    transition: background-color 0.3s;
+
+}
+
+.carousel-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.carousel-btn:hover {
+    /* background-color: #505963; */
+    background-color: transparent;
+    border: 2px solid black;
+}
+
+.testimonial-box {
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+    width: 60%;
+    background-color: #ffffff;
+}
+
+.quotes_box {
+    top: 0;
+    /* left: -4rem; */
+    height: 3rem;
+    width: 3rem;
+}
+
+.quotes_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#testimonialText {
+    font-size: clamp(20px, 2rem, 5px);
+    line-height: 1.5;
+    color: rgb(70, 65, 65);
+    font-style: italic;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.carousel-indicator {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.carousel-indicator.active {
+    background-color: #007bff;
+}
+
+
+.carousel-container {
+    background-image: url('../assets/corousel-background.jpg') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 60vh;
+    margin-top: -8%;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-container {
+    background-image: url('../assets/corousel-background.jpg') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 60vh;
+    margin-top: -8%;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-container {
+    background-image: url('../assets/corousel-background.jpg') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 60vh;
+    margin-top: -8%;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.two_images {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    margin-left: 0 !important;
+}
+
+.two_images .image {
+    width: 50%;
+    height: 40vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.image1 {
+    background-image: url('../assets/left_img_back.jpg');
+
+}
+
+.image2 {
+    background-image: url('../assets/right_img_back.jpg');
+
+}
+
+
+
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.no-gutters>.col-6 {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.image i, .image h2, .image p, .image button {
+    margin: 10px 0;
+  }
+  
+  .image button {
+    background-color: white;
+    color: #000;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .image button:hover {
+    background-color: #505963;
+    color: white;
+  }
