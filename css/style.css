@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-body,
-html {
+body {
     margin: 0;
+    height: auto;
     padding: 0;
     overflow-x: hidden;
     font-family: 'Montserrat', sans-serif;
@@ -432,6 +432,8 @@ header::after {
     color: white;
     text-align: center;
     padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    background-blend-mode: color;
 }
 
 .image1 {
@@ -456,24 +458,27 @@ header::after {
     padding-left: 0;
 }
 
-.image i, .image h2, .image p, .image button {
+.image i,
+.image h2,
+.image p,
+.image button {
     margin: 10px 20px;
-  }
-  
-  .image i {
+}
+
+.image i {
     height: clamp(24px, 5vw, 48px);
-    width:clamp(24px, 5vw, 48px) ;
-  }
-  
-  .image h2 {
+    width: clamp(24px, 5vw, 48px);
+}
+
+.image h2 {
     font-size: clamp(16px, 4vw, 32px);
-  }
-  
-  .image p {
+}
+
+.image p {
     font-size: clamp(14px, 3vw, 24px);
-  }
-  
-  .image button {
+}
+
+.image button {
     background-color: white;
     color: #000;
     border: none;
@@ -482,9 +487,9 @@ header::after {
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
     border-radius: 20px;
-  }
-  
-  .image button:hover {
+}
+
+.image button:hover {
     background-color: #505963;
     color: white;
-  }
+}

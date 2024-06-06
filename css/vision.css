@@ -1,0 +1,51 @@
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.vision-page {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.director-photo {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.vision-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.vision-header {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.quote {
+    font-style: italic;
+    color: #16a085;
+}
+
+.home-button {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    float: left;
+    /* Align to the left */
+}
+
+.home-button:hover {
+    background-color: #2980b9;
+}
+
+.home-icon {
+    margin-right: 5px;
+}
