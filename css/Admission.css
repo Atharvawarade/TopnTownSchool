@@ -1,0 +1,25 @@
+.section-title {
+    margin-top: 40px;
+    text-align: center;
+    color: #007bff;
+}
+
+.step {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.step h5 {
+    color: #007bff;
+}
+
+.step p {
+    color: #666;
+}
+
+.admission-btn {
+    margin-top: 40px;
+    text-align: center;
+}
