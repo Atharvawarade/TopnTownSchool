@@ -9,26 +9,28 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+
     <link rel="stylesheet" href="css/Chapter.css" />
     <link rel="stylesheet" href="css/Contact.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
     <title>Contact Us</title>
   </head>
   <body>
     <style>
-      .navbar {
-        position: fixed;
+      /* Custom CSS for responsive map */
+      .map-responsive {
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        margin-bottom: 20px;
+      }
+      .map-responsive iframe {
+        position: absolute;
         top: 0;
+        left: 0;
         width: 100%;
-        z-index: 1050; /* Higher z-index to ensure it stays on top */
-        background-color: white; /* Optional: Set background color */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
-      }
-      .navbar .container-fluid {
-        max-width: 80%; /* 80% width of the device */
-        margin: 0 auto; /* Center the container */
-      }
-      .offcanvas-header {
-        border-bottom: 1px solid #dee2e6;
+        height: 100%;
       }
     </style>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -168,15 +170,17 @@
       <div class="contact-section">
         <div class="contact-info">
           <h2>Location</h2>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d895.6965428460439!2d77.87811149384393!3d26.70533754851709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3973fefc3ba6e5f5%3A0x6f63c8c2967cd42a!2sTop%20N%20Town%20Convent%202020%20School!5e1!3m2!1sen!2sin!4v1717451759477!5m2!1sen!2sin"
-            width="600"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+          <div class="map-responsive">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d895.6965428460439!2d77.87811149384393!3d26.70533754851709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3973fefc3ba6e5f5%3A0x6f63c8c2967cd42a!2sTop%20N%20Town%20Convent%202020%20School!5e1!3m2!1sen!2sin!4v1717451759477!5m2!1sen!2sin"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
           <!-- You can embed a Google Maps iframe here -->
         </div>
         <div class="contact-icons row">

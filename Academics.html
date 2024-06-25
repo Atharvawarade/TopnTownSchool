@@ -9,7 +9,9 @@
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
-    />
+    />   
+  
+
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
@@ -23,6 +25,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="css/Chapter.css" />
+    <link rel="stylesheet" href="css/navbar.css">
     <style>
       body {
         font-family: "Roboto", sans-serif; /* Change font to Roboto */
@@ -31,23 +34,7 @@
         font-family: "Roboto", sans-serif; /* Change font of paragraphs to Roboto */
       }
     </style>
-    <style>
-      .navbar {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1050; /* Higher z-index to ensure it stays on top */
-        background-color: white; /* Optional: Set background color */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
-      }
-      .navbar .container-fluid {
-        max-width: 80%; /* 80% width of the device */
-        margin: 0 auto; /* Center the container */
-      }
-      .offcanvas-header {
-        border-bottom: 1px solid #dee2e6;
-      }
-    </style>
+
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -182,7 +169,7 @@
         <a class="btn btn-primary mt-3" href="Contact.html">Contact Us</a>
       </div>
     </div>
-    <div class="vh-100">
+    <div class="vh-100 mobile-vh-auto">
       <div class="we">
         <div class="top">
           <h1><i class="fas fa-newspaper"></i> Blogs and News</h1>
@@ -234,6 +221,7 @@
         </div>
       </div>
     </div>
+  </div>
   </body>
   <!-- Footer Section -->
   <footer
