@@ -423,10 +423,10 @@ header::after {
 }
 
 .bg-img-1 {
-    background-image: url('../assets/left_img_back.jpg'); /* Replace with your image URL */
+    background-image: url('../assets/discussion.jpg'); /* Replace with your image URL */
 }
 .bg-img-2 {
-    background-image: url('../assets/right_img_back.jpg'); /* Replace with your image URL */
+    background-image: url('../assets/campus.jpg'); /* Replace with your image URL */
 }
 
 .content i {
