@@ -395,6 +395,7 @@ header::after {
     text-align: center;
     color: white; /* Adjust text color for better readability on the background image */
     position: relative; /* Required for the pseudo-element */
+    filter: blur(1);
 }
 
 .bg-img-1::before, .bg-img-2::before {
