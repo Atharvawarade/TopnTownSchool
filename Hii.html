@@ -1,171 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Testimonial Carousel</title>
-    <link rel="stylesheet" href="styles.css" />
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: #f0f0f0;
-        flex-direction: column;
-      }
 
-      .carousel-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 60%;
-        margin: auto;
-        background-color: #fff;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        overflow: hidden;
-        position: relative;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testimonial Carousel</title>
+  <link rel="stylesheet" href="styles.css" />
 
-      .carousel-btn {
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-        font-size: 20px;
-        border-radius: 5px;
-        transition: background-color 0.3s;
-      }
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      flex-direction: column;
+    }
 
-      .carousel-btn:hover {
-        background-color: #0056b3;
-      }
+    .carousel-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 60%;
+      margin: auto;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      overflow: hidden;
+      position: relative;
+    }
 
-      .testimonial-box {
-        flex: 1;
-        padding: 0 20px;
-        text-align: center;
-        transition: transform 0.5s ease-in-out;
-        will-change: transform;
-      }
+    .carousel-btn {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
 
-      #testimonialText {
-        font-size: 18px;
-        line-height: 1.5;
-      }
+    .carousel-btn:hover {
+      background-color: #0056b3;
+    }
 
-      .carousel-indicators {
-        display: flex;
-        justify-content: center;
-        margin-top: 10px;
-      }
+    .testimonial-box {
+      flex: 1;
+      padding: 0 20px;
+      text-align: center;
+      transition: transform 0.5s ease-in-out;
+      will-change: transform;
+    }
 
-      .carousel-indicator {
-        height: 12px;
-        width: 12px;
-        margin: 0 5px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-      }
+    #testimonialText {
+      font-size: 18px;
+      line-height: 1.5;
+    }
 
-      .carousel-indicator.active {
-        background-color: #007bff;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="carousel-container">
-      <button class="carousel-btn" id="prevBtn">❮</button>
-      <div class="testimonial-box" id="testimonialBox">
-        <p id="testimonialText">
-          "This is the best school ever! My child has learned so much and loves
-          going to school every day." - Parent
-        </p>
-      </div>
-      <button class="carousel-btn" id="nextBtn">❯</button>
+    .carousel-indicators {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .carousel-indicator {
+      height: 12px;
+      width: 12px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .carousel-indicator.active {
+      background-color: #007bff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="carousel-container">
+    <button class="carousel-btn" id="prevBtn">❮</button>
+    <div class="testimonial-box" id="testimonialBox">
+      <p id="testimonialText">
+        "This is the best school ever! My child has learned so much and loves
+        going to school every day." - Parent
+      </p>
     </div>
-    <div class="carousel-indicators" id="carouselIndicators"></div>
+    <button class="carousel-btn" id="nextBtn">❯</button>
+  </div>
+  <div class="carousel-indicators" id="carouselIndicators"></div>
 
-    <script src="script.js"></script>
-    <script>
-      const testimonials = [
-        '"This is the best school ever! My child has learned so much and loves going to school every day." - Parent',
-        '"The teachers are amazing and the curriculum is challenging yet rewarding." - Student',
-        '"I appreciate the dedication of the staff and the safe learning environment." - Teacher',
-        '"A wonderful community where every student is valued." - Administrator',
-        '"The extracurricular activities are top-notch and help students develop holistically." - Alumni',
-      ];
+  <script src="script.js"></script>
+  <script>
+    const testimonials = [
+      '"This is the best school ever! My child has learned so much and loves going to school every day." - Parent',
+      '"The teachers are amazing and the curriculum is challenging yet rewarding." - Student',
+      '"I appreciate the dedication of the staff and the safe learning environment." - Teacher',
+      '"A wonderful community where every student is valued." - Administrator',
+      '"The extracurricular activities are top-notch and help students develop holistically." - Alumni',
+    ];
 
-      let currentTestimonialIndex = 0;
+    let currentTestimonialIndex = 0;
 
-      const testimonialBox = document.getElementById("testimonialBox");
-      const testimonialText = document.getElementById("testimonialText");
-      const prevBtn = document.getElementById("prevBtn");
-      const nextBtn = document.getElementById("nextBtn");
-      const carouselIndicators = document.getElementById("carouselIndicators");
+    const testimonialBox = document.getElementById("testimonialBox");
+    const testimonialText = document.getElementById("testimonialText");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const carouselIndicators = document.getElementById("carouselIndicators");
 
-      // Create indicators
-      testimonials.forEach((_, index) => {
-        const indicator = document.createElement("div");
-        indicator.classList.add("carousel-indicator");
-        if (index === 0) indicator.classList.add("active");
-        carouselIndicators.appendChild(indicator);
-      });
+    // Create indicators
+    testimonials.forEach((_, index) => {
+      const indicator = document.createElement("div");
+      indicator.classList.add("carousel-indicator");
+      if (index === 0) indicator.classList.add("active");
+      carouselIndicators.appendChild(indicator);
+    });
 
-      const indicators = document.querySelectorAll(".carousel-indicator");
+    const indicators = document.querySelectorAll(".carousel-indicator");
 
-      prevBtn.addEventListener("click", () => {
-        slideTransition("left");
-        setTimeout(() => {
-          currentTestimonialIndex =
-            (currentTestimonialIndex - 1 + testimonials.length) %
-            testimonials.length;
-          updateTestimonial();
-        }, 500); // Wait for the transition to complete
-      });
+    prevBtn.addEventListener("click", () => {
+      slideTransition("left");
+      setTimeout(() => {
+        currentTestimonialIndex =
+          (currentTestimonialIndex - 1 + testimonials.length) %
+          testimonials.length;
+        updateTestimonial();
+      }, 500); // Wait for the transition to complete
+    });
 
-      nextBtn.addEventListener("click", () => {
-        slideTransition("right");
-        setTimeout(() => {
-          currentTestimonialIndex =
-            (currentTestimonialIndex + 1) % testimonials.length;
-          updateTestimonial();
-        }, 500); // Wait for the transition to complete
-      });
+    nextBtn.addEventListener("click", () => {
+      slideTransition("right");
+      setTimeout(() => {
+        currentTestimonialIndex =
+          (currentTestimonialIndex + 1) % testimonials.length;
+        updateTestimonial();
+      }, 500); // Wait for the transition to complete
+    });
 
-      function slideTransition(direction) {
+    function slideTransition(direction) {
+      testimonialBox.style.transform =
+        direction === "left" ? "translateX(-100%)" : "translateX(100%)";
+      setTimeout(() => {
+        testimonialBox.style.transition = "none";
         testimonialBox.style.transform =
-          direction === "left" ? "translateX(-100%)" : "translateX(100%)";
+          direction === "left" ? "translateX(100%)" : "translateX(-100%)";
         setTimeout(() => {
-          testimonialBox.style.transition = "none";
-          testimonialBox.style.transform =
-            direction === "left" ? "translateX(100%)" : "translateX(-100%)";
-          setTimeout(() => {
-            testimonialBox.style.transition = "transform 0.5s ease-in-out";
-            testimonialBox.style.transform = "translateX(0)";
-          }, 50);
-        }, 450); // Adjust timing for smoother transition
-      }
+          testimonialBox.style.transition = "transform 0.5s ease-in-out";
+          testimonialBox.style.transform = "translateX(0)";
+        }, 50);
+      }, 450); // Adjust timing for smoother transition
+    }
 
-      function updateTestimonial() {
-        testimonialText.textContent = testimonials[currentTestimonialIndex];
-        indicators.forEach((indicator, index) => {
-          indicator.classList.toggle(
-            "active",
-            index === currentTestimonialIndex
-          );
-        });
-      }
+    function updateTestimonial() {
+      testimonialText.textContent = testimonials[currentTestimonialIndex];
+      indicators.forEach((indicator, index) => {
+        indicator.classList.toggle(
+          "active",
+          index === currentTestimonialIndex
+        );
+      });
+    }
 
-      // Initialize with the first testimonial
-      updateTestimonial();
-    </script>
-  </body>
+    // Initialize with the first testimonial
+    updateTestimonial();
+  </script>
+</body>
+
 </html>
